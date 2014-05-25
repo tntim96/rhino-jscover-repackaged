@@ -37,9 +37,9 @@
   </licenses>
 
   <scm>
-    <url>https://github.com/tntim96/rhino-jscover</url>
-    <developerConnection>scm:git:git@github.com:tntim96/rhino-jscover.git</developerConnection>
-    <connection>scm:git:git://github.com/tntim96/rhino-jscover.git</connection>
+    <url>https://github.com/tntim96/rhino-jscover-repackaged</url>
+    <developerConnection>scm:git:git@github.com:tntim96/rhino-jscover-repackaged.git</developerConnection>
+    <connection>scm:git:git://github.com/tntim96/rhino-jscover-repackaged.git</connection>
   </scm>
 
   <issueManagement>
