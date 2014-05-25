@@ -19,7 +19,7 @@ Requires Ant version 1.2
   </target>
 
   <target name="shell" depends="compile">
-    <java classname="org.mozilla.javascript.tools.shell.Main"
+    <java classname="jscover.mozilla.javascript.tools.shell.Main"
           classpath="${classes}"
           fork="true">
       <arg line="-version 170"/>
@@ -29,15 +29,15 @@ Requires Ant version 1.2
   <target name="compile-most">
     <javac srcdir="src"
            destdir="${classes}"
-           includes="org/**/*.java"
-           excludes="org/**/jdk15/*.java"
+           includes="jscover/**/*.java"
+           excludes="jscover/**/jdk15/*.java"
            deprecation="on"
            debug="${debug}"
            includeAntRuntime="false"
            target="${target-jvm}"
            source="${source-level}" />
     <copy todir="${classes}">
-      <fileset dir="src" includes="org/**/*.properties" />
+      <fileset dir="src" includes="jscover/**/*.properties" />
       <filterset>
       <filter token="IMPLEMENTATION.VERSION"
               value="${implementation.version}"/>
@@ -48,7 +48,7 @@ Requires Ant version 1.2
   <target name="compile-jdk15" if="jdk15">
     <javac srcdir="src"
            destdir="${classes}"
-           includes="org/**/jdk15/*.java"
+           includes="jscover/**/jdk15/*.java"
            deprecation="on"
            debug="${debug}"
            includeAntRuntime="false"
@@ -67,7 +67,7 @@ Requires Ant version 1.2
   <target name="clean">
     <delete includeEmptyDirs="true">
       <fileset dir="${classes}"
-               excludes="org/mozilla/javascript/tools/**"/>
+               excludes="jscover/mozilla/javascript/tools/**"/>
     </delete>
   </target>
 

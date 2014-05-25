@@ -168,21 +168,21 @@
                 <manifestFile>${project.basedir}/src/manifest</manifestFile>
               </archive>
               <includes>
-                <include>org/mozilla/javascript/*.class</include>
-                <include>org/mozilla/javascript/debug/*.class</include>
-                <include>org/mozilla/javascript/resources/*.properties</include>
-                <include>org/mozilla/javascript/xml/*.class</include>
-                <include>org/mozilla/javascript/continuations/*.class</include>
-                <include>org/mozilla/javascript/jdk13/*.class</include>
-                <include>org/mozilla/javascript/ast/*.class</include>
-                <include>org/mozilla/javascript/json/*.class</include>
-                <include>org/mozilla/javascript/annotations/*.class</include>
-                <include>org/mozilla/javascript/v8dtoa/*.class</include>
-                <include>org/mozilla/javascript/regexp/*.class</include>
+                <include>jscover/mozilla/javascript/*.class</include>
+                <include>jscover/mozilla/javascript/debug/*.class</include>
+                <include>jscover/mozilla/javascript/resources/*.properties</include>
+                <include>jscover/mozilla/javascript/xml/*.class</include>
+                <include>jscover/mozilla/javascript/continuations/*.class</include>
+                <include>jscover/mozilla/javascript/jdk13/*.class</include>
+                <include>jscover/mozilla/javascript/ast/*.class</include>
+                <include>jscover/mozilla/javascript/json/*.class</include>
+                <include>jscover/mozilla/javascript/annotations/*.class</include>
+                <include>jscover/mozilla/javascript/v8dtoa/*.class</include>
+                <include>jscover/mozilla/javascript/regexp/*.class</include>
               </includes>
               <excludes>
                 <!-- exclude classes that use class generation library -->
-                <exclude>org/mozilla/javascript/JavaAdapter*.class</exclude>
+                <exclude>jscover/mozilla/javascript/JavaAdapter*.class</exclude>
               </excludes>
             </configuration>
           </plugin>
@@ -262,8 +262,8 @@
           <include>tests.tar.gz</include>
           <include>doctests/*</include>
           <include>jstests/*</include>
-          <include>org/mozilla/javascript/tests/**/*.js</include>
-          <include>org/mozilla/javascript/tests/**/*.jar</include>
+          <include>jscover/mozilla/javascript/tests/**/*.js</include>
+          <include>jscover/mozilla/javascript/tests/**/*.jar</include>
         </includes>
       </testResource>
     </testResources>
@@ -365,13 +365,13 @@
                 <mkdir dir="${project.build.directory}/gen-sources/deprecated"/>
                 <copy todir="${project.build.directory}/gen-sources/deprecated">
                   <fileset dir="${project.basedir}/deprecatedsrc"
-                      includes="org/mozilla/javascript/*.java"/>
+                      includes="jscover/mozilla/javascript/*.java"/>
                 </copy>
                 <!-- deprecated xmlbeans sources -->
                 <mkdir dir="${project.build.directory}/gen-sources/deprecated-xmlbeans"/>
                 <copy todir="${project.build.directory}/gen-sources/deprecated-xmlbeans">
                   <fileset dir="${project.basedir}/deprecatedsrc"
-                      includes="org/mozilla/javascript/xml/impl/xmlbeans/*.java"/>
+                      includes="jscover/mozilla/javascript/xml/impl/xmlbeans/*.java"/>
                 </copy>
               </target>
             </configuration>
@@ -402,7 +402,7 @@
                 <taskdef name="retrotranslator"
                     classname="net.sf.retrotranslator.transformer.RetrotranslatorTask"
                     classpathref="maven.plugin.classpath"/>
-                <retrotranslator target="1.4" embed="org.mozilla.javascript"
+                <retrotranslator target="1.4" embed="jscover.mozilla.javascript"
                     srcjar="${project.build.directory}/${project.build.finalName}.jar"
                     destjar="${project.build.directory}/${project.build.finalName}-jdk14.jar">
                   <classpath refid="maven.plugin.classpath"/>
@@ -589,18 +589,18 @@
             <!-- license plugin doesn't support files without any file extensions -->
             <exclude>**/README</exclude>
             <!-- BSD 3-Clause licensed code from Google -->
-            <exclude>src/org/mozilla/javascript/v8dtoa/CachedPowers.java</exclude>
-            <exclude>src/org/mozilla/javascript/v8dtoa/DiyFp.java</exclude>
-            <exclude>src/org/mozilla/javascript/v8dtoa/DoubleHelper.java</exclude>
-            <exclude>src/org/mozilla/javascript/v8dtoa/FastDtoa.java</exclude>
+            <exclude>src/jscover/mozilla/javascript/v8dtoa/CachedPowers.java</exclude>
+            <exclude>src/jscover/mozilla/javascript/v8dtoa/DiyFp.java</exclude>
+            <exclude>src/jscover/mozilla/javascript/v8dtoa/DoubleHelper.java</exclude>
+            <exclude>src/jscover/mozilla/javascript/v8dtoa/FastDtoa.java</exclude>
             <!-- BSD 3-Clause licensed code from Sun -->
-            <exclude>toolsrc/org/mozilla/javascript/tools/debugger/treetable/**</exclude>
+            <exclude>toolsrc/jscover/mozilla/javascript/tools/debugger/treetable/**</exclude>
             <!-- MIT-style licensed code from CommonJS -->
-            <exclude>testsrc/org/mozilla/javascript/tests/commonjs/module/1.0/**</exclude>
+            <exclude>testsrc/jscover/mozilla/javascript/tests/commonjs/module/1.0/**</exclude>
             <!-- Files with unknown and/or other licenses -->
             <exclude>testsrc/benchmarks/**</exclude>
-            <exclude>testsrc/org/mozilla/javascript/tests/commonjs/module/*</exclude>
-            <exclude>testsrc/org/mozilla/javascript/tests/commonjs/module/x/**</exclude>
+            <exclude>testsrc/jscover/mozilla/javascript/tests/commonjs/module/*</exclude>
+            <exclude>testsrc/jscover/mozilla/javascript/tests/commonjs/module/x/**</exclude>
           </excludes>
         </configuration>
         <executions>

@@ -67,7 +67,7 @@
     <echo>Compiling XMLBeans E4X implementation using ${xbean.jar} and ${jsr173.jar}</echo>
     <javac srcdir="deprecatedsrc"
            destdir="${classes}"
-           includes="org/mozilla/javascript/xml/impl/xmlbeans/*.java"
+           includes="jscover/mozilla/javascript/xml/impl/xmlbeans/*.java"
            deprecation="on"
            debug="${debug}"
            classpathref="xmlbeans.classpath"
@@ -95,7 +95,7 @@
   <target name="clean">
     <delete includeEmptyDirs="true">
       <fileset dir="${classes}"
-               includes="org/mozilla/javascript/xmlimpl/**"
+               includes="jscover/mozilla/javascript/xmlimpl/**"
       />
     </delete>
   </target>

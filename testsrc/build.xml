@@ -82,7 +82,7 @@
         <pathelement path="${classes}" />
       </classpath>
       <sourcepath path="testsrc" />
-        <include name="org/mozilla/javascript/drivers/JsDriver.java" />
+        <include name="jscover/mozilla/javascript/drivers/JsDriver.java" />
     </javac>
     <antcall target="copy-files" />
   </target>
@@ -193,7 +193,7 @@
     <mkdir dir="${test.output}" />
     <java
       fork="true"
-      classname="org.mozilla.javascript.drivers.JsDriver"
+      classname="jscover.mozilla.javascript.drivers.JsDriver"
       maxmemory="${test.vm.mx}"
     >
       <classpath>

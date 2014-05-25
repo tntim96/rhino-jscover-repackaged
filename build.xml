@@ -127,7 +127,7 @@
     <retrotranslator
       srcjar="${jarfile}"
       destjar="${dist.dir}/${rhino-14.jar}"
-      embed="org.mozilla.javascript"
+      embed="jscover.mozilla.javascript"
     />
   </target>
 
@@ -135,22 +135,22 @@
     <property name="smalljarfile" location="${dist.dir}/${small-rhino.jar}"/>
     <jar basedir="${classes}" destfile="${smalljarfile}"
          compress="${jar-compression}">
-      <include name="org/mozilla/javascript/*.class"/>
+      <include name="jscover/mozilla/javascript/*.class"/>
 
-      <include name="org/mozilla/javascript/debug/*.class"/>
-      <include name="org/mozilla/javascript/resources/*.properties"/>
-      <include name="org/mozilla/javascript/xml/*.class"/>
-      <include name="org/mozilla/javascript/continuations/*.class"/>
-      <include name="org/mozilla/javascript/jdk13/*.class"/>
-      <include name="org/mozilla/javascript/ast/*.class"/>
-      <include name="org/mozilla/javascript/json/*.class"/>
-      <include name="org/mozilla/javascript/annotations/*.class"/>
-      <include name="org/mozilla/javascript/v8dtoa/*.class"/>
+      <include name="jscover/mozilla/javascript/debug/*.class"/>
+      <include name="jscover/mozilla/javascript/resources/*.properties"/>
+      <include name="jscover/mozilla/javascript/xml/*.class"/>
+      <include name="jscover/mozilla/javascript/continuations/*.class"/>
+      <include name="jscover/mozilla/javascript/jdk13/*.class"/>
+      <include name="jscover/mozilla/javascript/ast/*.class"/>
+      <include name="jscover/mozilla/javascript/json/*.class"/>
+      <include name="jscover/mozilla/javascript/annotations/*.class"/>
+      <include name="jscover/mozilla/javascript/v8dtoa/*.class"/>
 
       <!-- exclude classes that uses class generation library -->
-      <exclude name="org/mozilla/javascript/JavaAdapter*.class"/>
+      <exclude name="jscover/mozilla/javascript/JavaAdapter*.class"/>
 
-      <include name="org/mozilla/javascript/regexp/*.class"
+      <include name="jscover/mozilla/javascript/regexp/*.class"
                unless="no-regexp"/>
     </jar>
 
@@ -160,7 +160,7 @@
     <retrotranslator
       srcjar="${smalljarfile}"
       destjar="${dist.dir}/${small-rhino-14.jar}"
-      embed="org.mozilla.javascript"
+      embed="jscover.mozilla.javascript"
     />
   </target>
 

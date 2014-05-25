@@ -17,7 +17,7 @@ Requires Ant version 1.2
   <target name="compile" depends="properties">
     <javac srcdir="toolsrc"
            destdir="${classes}"
-           includes="org/**/*.java"
+           includes="jscover/**/*.java"
            deprecation="on"
            debug="${debug}"
            includeAntRuntime="false"
@@ -26,7 +26,7 @@ Requires Ant version 1.2
     >
     </javac>
     <copy todir="${classes}">
-      <fileset dir="toolsrc" includes="org/**/*.properties" />
+      <fileset dir="toolsrc" includes="jscover/**/*.properties" />
     </copy>
   </target>
 
@@ -41,7 +41,7 @@ Requires Ant version 1.2
   <target name="clean" depends="properties">
     <delete includeEmptyDirs="true">
       <fileset dir="${classes}"
-               includes="org/mozilla/javascript/tools/**"/>
+               includes="jscover/mozilla/javascript/tools/**"/>
     </delete>
   </target>
 
