@@ -1,5 +1,7 @@
 Rhino for JSCover
 =================
+[![Build Status](https://drone.io/github.com/tntim96/rhino-jscover-repackaged/status.png)](https://drone.io/github.com/tntim96/rhino-jscover-repackaged/latest)
+
 This is intended to be a temporary repository until Rhino incorporates some bug fixes into a released version.
 
 Changes
