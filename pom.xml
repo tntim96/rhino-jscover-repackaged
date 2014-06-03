@@ -12,8 +12,8 @@
   </parent>
 
   <groupId>com.github.tntim96</groupId>
-  <artifactId>rhino</artifactId>
-  <version>1.7R5pre02</version>
+  <artifactId>rhino-repackaged</artifactId>
+  <version>1.7R5pre01-SNAPSHOT</version>
   <packaging>jar</packaging>
 
   <name>Mozilla Rhino</name>
