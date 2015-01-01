@@ -13,7 +13,7 @@
 
   <groupId>com.github.tntim96</groupId>
   <artifactId>rhino-repackaged</artifactId>
-  <version>1.7R5pre01-SNAPSHOT</version>
+  <version>1.7R5pre01</version>
   <packaging>jar</packaging>
 
   <name>Mozilla Rhino</name>
@@ -475,6 +475,20 @@
             <manifestFile>${project.basedir}/src/manifest</manifestFile>
           </archive>
         </configuration>
+      </plugin>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-gpg-plugin</artifactId>
+        <version>1.5</version>
+        <executions>
+          <execution>
+            <id>sign-artifacts</id>
+            <phase>verify</phase>
+            <goals>
+              <goal>sign</goal>
+            </goals>
+          </execution>
+        </executions>
       </plugin>
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
