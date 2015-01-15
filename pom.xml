@@ -13,7 +13,7 @@
 
   <groupId>com.github.tntim96</groupId>
   <artifactId>rhino-repackaged</artifactId>
-  <version>1.7R5pre01</version>
+  <version>1.7R5pre02-SNAPSHOT</version>
   <packaging>jar</packaging>
 
   <name>Mozilla Rhino</name>
